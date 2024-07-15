@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{734221DC-ABF6-4665-BD50-FC9CF42F80A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewClinic</RootNamespace>
+    <AssemblyName>NewClinic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\JOSHUA\Documents\Clinic System\Installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MixedRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1D2CC4A138DECAB2689E7F7BEAD5D50F8586E00C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NewClinic_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\Project Software\Package Source Nuget\For Camera\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\Project Software\Package Source Nuget\For Camera\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\Project Software\Package Source Nuget\For Camera\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Project Software\Package Source Nuget\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net45\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Package Source Nuget\MYSQL File Connection\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clinic.cs" />
+    <Compile Include="ControlAccount\action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\action.Designer.cs">
+      <DependentUpon>action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAccount\addAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\addAcc.Designer.cs">
+      <DependentUpon>addAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAccount\changeuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\changeuser.Designer.cs">
+      <DependentUpon>changeuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAccount\editacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\editacc.Designer.cs">
+      <DependentUpon>editacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAccount\lisacc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\lisacc.Designer.cs">
+      <DependentUpon>lisacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAccount\listacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAccount\listacc.Designer.cs">
+      <DependentUpon>listacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\AddBEMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\AddBEMD.Designer.cs">
+      <DependentUpon>AddBEMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\addmediform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\addmediform.Designer.cs">
+      <DependentUpon>addmediform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\addprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\addprofile.Designer.cs">
+      <DependentUpon>addprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\Addcollege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\Addcollege.Designer.cs">
+      <DependentUpon>Addcollege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\MedicalProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\MedicalProfile.Designer.cs">
+      <DependentUpon>MedicalProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdd\ViewMediHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdd\ViewMediHistory.Designer.cs">
+      <DependentUpon>ViewMediHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\AdmissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\AdmissionForm.Designer.cs">
+      <DependentUpon>AdmissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\miniadmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\miniadmission.Designer.cs">
+      <DependentUpon>miniadmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\select1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\select1.Designer.cs">
+      <DependentUpon>select1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\smalladmission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\smalladmission.Designer.cs">
+      <DependentUpon>smalladmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\Viewingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\Viewingform.Designer.cs">
+      <DependentUpon>Viewingform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAdmission\viewpadmission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdmission\viewpadmission.Designer.cs">
+      <DependentUpon>viewpadmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlArchive\listarchive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlArchive\listarchive.Designer.cs">
+      <DependentUpon>listarchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCamera\Camera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlCamera\Camera.Designer.cs">
+      <DependentUpon>Camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDashboard\listdesease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDashboard\listdesease.Designer.cs">
+      <DependentUpon>listdesease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDashboard\listdeseases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlDashboard\listdeseases.Designer.cs">
+      <DependentUpon>listdeseases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDashboard\listoutstack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlDashboard\listoutstack.Designer.cs">
+      <DependentUpon>listoutstack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDashboard\listuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlDashboard\listuser.Designer.cs">
+      <DependentUpon>listuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDashboard\listview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlDashboard\listview.Designer.cs">
+      <DependentUpon>listview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFile\addfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFile\addfile.Designer.cs">
+      <DependentUpon>addfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFile\addfileform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFile\addfileform.Designer.cs">
+      <DependentUpon>addfileform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFile\showfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFile\showfile.Designer.cs">
+      <DependentUpon>showfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\addmed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\addmed.Designer.cs">
+      <DependentUpon>addmed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\Arrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\Arrive.Designer.cs">
+      <DependentUpon>Arrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\dischargetime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\dischargetime.Designer.cs">
+      <DependentUpon>dischargetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\insertmed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\insertmed.Designer.cs">
+      <DependentUpon>insertmed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\med.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\med.Designer.cs">
+      <DependentUpon>med.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\removemed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\removemed.Designer.cs">
+      <DependentUpon>removemed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogbook\views.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogbook\views.Designer.cs">
+      <DependentUpon>views.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogin\Login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogin\Login2.Designer.cs">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\admision.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\admision.Designer.cs">
+      <DependentUpon>admision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\editform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\editform.Designer.cs">
+      <DependentUpon>editform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\editprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\editprofile.Designer.cs">
+      <DependentUpon>editprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\listadmission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\listadmission.Designer.cs">
+      <DependentUpon>listadmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\listmedicprofi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\listmedicprofi.Designer.cs">
+      <DependentUpon>listmedicprofi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\logbook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\logbook.Designer.cs">
+      <DependentUpon>logbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\mediprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\mediprofile.Designer.cs">
+      <DependentUpon>mediprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\viewadmilog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\viewadmilog.Designer.cs">
+      <DependentUpon>viewadmilog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\viewMedicProfi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\viewMedicProfi.Designer.cs">
+      <DependentUpon>viewMedicProfi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfile\viewprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfile\viewprofile.Designer.cs">
+      <DependentUpon>viewprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlReport\viewreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlReport\viewreport.Designer.cs">
+      <DependentUpon>viewreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSV\svlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSV\svlist.Designer.cs">
+      <DependentUpon>svlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTools\JComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTools\JDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlTools\jpicktureBoxcircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlTools\JpictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlTools\textboxcontact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTools\textboxcontact.Designer.cs">
+      <DependentUpon>textboxcontact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\AddProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\AddProfile.Designer.cs">
+      <DependentUpon>AddProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\admission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\admission.Designer.cs">
+      <DependentUpon>admission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Archive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Archive.Designer.cs">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\connectionserver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\connectionserver.Designer.cs">
+      <DependentUpon>connectionserver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\logbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\logbook.Designer.cs">
+      <DependentUpon>logbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\SvConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\SvConfig.Designer.cs">
+      <DependentUpon>SvConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlAccount\action.resx">
+      <DependentUpon>action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAccount\addAcc.resx">
+      <DependentUpon>addAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAccount\changeuser.resx">
+      <DependentUpon>changeuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAccount\editacc.resx">
+      <DependentUpon>editacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAccount\lisacc.resx">
+      <DependentUpon>lisacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAccount\listacc.resx">
+      <DependentUpon>listacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\AddBEMD.resx">
+      <DependentUpon>AddBEMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\addmediform.resx">
+      <DependentUpon>addmediform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\addprofile.resx">
+      <DependentUpon>addprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\Addcollege.resx">
+      <DependentUpon>Addcollege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\MedicalProfile.resx">
+      <DependentUpon>MedicalProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdd\ViewMediHistory.resx">
+      <DependentUpon>ViewMediHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\AdmissionForm.resx">
+      <DependentUpon>AdmissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\miniadmission.resx">
+      <DependentUpon>miniadmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\select1.resx">
+      <DependentUpon>select1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\smalladmission.resx">
+      <DependentUpon>smalladmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\Viewingform.resx">
+      <DependentUpon>Viewingform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAdmission\viewpadmission.resx">
+      <DependentUpon>viewpadmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlArchive\listarchive.resx">
+      <DependentUpon>listarchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCamera\Camera.resx">
+      <DependentUpon>Camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDashboard\listdesease.resx">
+      <DependentUpon>listdesease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDashboard\listdeseases.resx">
+      <DependentUpon>listdeseases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDashboard\listoutstack.resx">
+      <DependentUpon>listoutstack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDashboard\listuser.resx">
+      <DependentUpon>listuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDashboard\listview.resx">
+      <DependentUpon>listview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFile\addfile.resx">
+      <DependentUpon>addfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFile\addfileform.resx">
+      <DependentUpon>addfileform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFile\showfile.resx">
+      <DependentUpon>showfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\addmed.resx">
+      <DependentUpon>addmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\Arrive.resx">
+      <DependentUpon>Arrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\dischargetime.resx">
+      <DependentUpon>dischargetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\insertmed.resx">
+      <DependentUpon>insertmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\med.resx">
+      <DependentUpon>med.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\removemed.resx">
+      <DependentUpon>removemed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogbook\views.resx">
+      <DependentUpon>views.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogin\Login2.resx">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\admision.resx">
+      <DependentUpon>admision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\editform.resx">
+      <DependentUpon>editform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\editprofile.resx">
+      <DependentUpon>editprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\listadmission.resx">
+      <DependentUpon>listadmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\listmedicprofi.resx">
+      <DependentUpon>listmedicprofi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\logbook.resx">
+      <DependentUpon>logbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\mediprofile.resx">
+      <DependentUpon>mediprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\viewadmilog.resx">
+      <DependentUpon>viewadmilog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\viewMedicProfi.resx">
+      <DependentUpon>viewMedicProfi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfile\viewprofile.resx">
+      <DependentUpon>viewprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlReport\viewreport.resx">
+      <DependentUpon>viewreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSV\svlist.resx">
+      <DependentUpon>svlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlTools\JComboBox.resx" />
+    <EmbeddedResource Include="ControlTools\textboxcontact.resx">
+      <DependentUpon>textboxcontact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\AddProfile.resx">
+      <DependentUpon>AddProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\admission.resx">
+      <DependentUpon>admission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Archive.resx">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\connectionserver.resx">
+      <DependentUpon>connectionserver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\logbook.resx">
+      <DependentUpon>logbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\SvConfig.resx">
+      <DependentUpon>SvConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="NewClinic_1_TemporaryKey.pfx" />
+    <None Include="NewClinic_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendardark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e7a5cf5c9e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Other Form\inventory\inventory\inventory.csproj">
+      <Project>{c7651a3b-4a6f-4655-9252-5a861fda7f07}</Project>
+      <Name>inventory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEALTHRECORD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logbook2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admission2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admissionee2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
